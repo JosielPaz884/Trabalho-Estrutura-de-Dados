@@ -26,4 +26,5 @@ def main():
             print("Você não digitou uma opção válida!")
             return opc
 
-
+if __name__== '__main__':
+    main()
