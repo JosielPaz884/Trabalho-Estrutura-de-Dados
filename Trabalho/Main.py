@@ -11,7 +11,6 @@ def menu():
         print("Você não digitou uma opção válida!")
         return menu()
     return opc
-1
 
 def main():
     opc = 0
