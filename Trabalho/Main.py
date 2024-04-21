@@ -1,30 +1,27 @@
 from Calculadora import*
 
 def menu():
-    print("-------------------------")
-    print("\033[0;34mBEM VINDO AO MENU PRINCIPAL\033[m")
-    print("1. Calcular uma expressão")
-    print("2. Sair do sistema")
-    opc = int(input("Digite a ação que deseja realizar: "))
-
+    try:
+        print("-------------------------")
+        print("\033[0;34mBEM VINDO AO MENU PRINCIPAL\033[m")
+        print("1. Calcular uma expressão")
+        print("2. Sair do sistema")
+        opc = int(input("Digite a ação que deseja realizar: "))
+    except ValueError:
+        print("Você não digitou uma opção válida!")
+        return menu()
     return opc
+1
 
 def main():
-    while True:
-        opc = menu()
-        try:
-            if opc == 1:
-                expression= str(input("Digite a Expressão: "))
-                result = calculate(expression)
-                print(f'Resultado: {result}')
-            
-            if opc == 2:
-                print("Obrigado por usar nossa aplicação. Volte sempre!")
-                break
+    opc = 0
 
-        except ValueError:
-            print("Você não digitou uma opção válida!")
-            return opc
+    while opc != 2:
+        opc = menu()
+        if opc == 1:
+            expression= str(input("Digite a Expressão: "))
+            result = calculate(expression)
+            print(f'Resultado: {result}')
 
 if __name__== '__main__':
     main()
