@@ -6,8 +6,8 @@ def precedence(op1,op2):
         '-': 1,
         '*': 2,
         '/': 2,
-        '(': 3,
-        ')': 3
+        '(': 0,
+        ')': 0
     }
 
     return precedence[op1]>precedence[op2]
