@@ -44,7 +44,7 @@ def calculate(expression):
         elif char== '(':
             operatorStack.push(char)
         elif char== ')':
-            while operatorStack.peek!= '(':
+            while operatorStack.peek()!= '(':
                 apiOperator(operatorStack,operandStack)
             operatorStack.pop()
     
